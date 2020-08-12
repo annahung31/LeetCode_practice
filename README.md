@@ -15,7 +15,7 @@ My personal notes for LeetCode practice.
     - Reference: 
         - [K’th Smallest/Largest Element in Unsorted Array | Set 3 (Worst Case Linear Time)](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/?ref=rp)
     
-    - Important NOTE!: 其中的 SWAP 是很常見的operation，標準做法是以 Lomuto scheme 實作 partition,[這個網頁](https://rust-algo.club/sorting/quicksort/)的圖說很易懂。 Worst case: O(n^2)。
+    - Important NOTE!: 其中的 Partition 是很常見的operation，標準做法是以 Lomuto scheme 實作 partition,[這個網頁](https://rust-algo.club/sorting/quicksort/)的圖說很易懂。 Worst case: O(n^2)。
 
     ```
     [ values <= pivot | values > pivot | not checked yet | pivot ]
