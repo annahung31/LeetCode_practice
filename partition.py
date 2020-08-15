@@ -25,13 +25,13 @@ def partition(arr, pivot):
             break
             
     i = 0
-    for j in range(_len):
+    for j in range(0, _len-2):
         if arr[j] <= pivot:
             arr = swap(arr, i, j)
             i += 1
     
     arr = swap(arr, i, r)
-    return arr
+    return i, arr
 
 
 
@@ -41,5 +41,5 @@ def partition(arr, pivot):
 if __name__ == '__main__':
     arr = [3,2,1,5,6,4] 
     pivot = 3
-    new_arr = partition(arr, pivot)
-    print(new_arr)
+    pos, new_arr = partition(arr, pivot)
+    print(pos, new_arr)
