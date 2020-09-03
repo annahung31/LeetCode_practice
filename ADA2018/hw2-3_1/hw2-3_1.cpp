@@ -25,13 +25,12 @@ int isLegal(int n){
 
 int main(){
     int n, m, i, j, value;
-    cin >> n ,m;
-
+    cin >> n >> m;
 
     vector<int> row;
-    row.assign(n, 0);
+    row.assign(m, 0);
     vector< vector<int> > map;
-    map.assign(m, row);
+    map.assign(n, row);
 
     for (i=0; i<n; i++){
         for (j=0; j<m; j++){
@@ -40,12 +39,6 @@ int main(){
         }
     }
 
-    for (i=0; i<n; i++){
-        for (j=0; j<m; j++){
-            
-            cout << map[i][j] << " ";
-        }
-    }
 
     return 0;
     //int LEGAL = isLegal(n);
