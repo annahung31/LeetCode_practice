@@ -25,7 +25,7 @@ int checkSave(int n){
 
 int main(){
     int n, m, i, j, value;
-    cin >> n >> m;
+    cin >> m >> n;
 
     vector<int> row;
     row.assign(m, 0);
@@ -45,12 +45,11 @@ int main(){
         }
     }
 
-    for (i=1; i<n+1; i++){
-        for (j=1; j<m+1; j++){
+    for (i=1; i<n; i++){
+        for (j=1; j<m; j++){
+            cout << i << j << endl;
             int SAFETY = checkSave(map[i][j]);
-
             dp[i][j] = (dp[i - 1][j] + dp[i][j - 1]) % MOD;
-            
             if (SAFETY==0){
                 dp[i][j] = 0;
             }
