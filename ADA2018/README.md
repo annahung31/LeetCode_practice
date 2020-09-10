@@ -10,4 +10,4 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
 ### Advanced
 * [hw1 #2](./hw1-2)
 
-* hw2 #1-2
+* [hw2 #1](./hw2-1)
