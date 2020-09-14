@@ -15,13 +15,13 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
         ![equation](https://bit.ly/3isYtzB)  
         再把各項整理後，變成：  
         ![equation](https://bit.ly/2GXLOH4)  
-        令[![equation](https://bit.ly/3mnloyO) ，[![equation](https://bit.ly/3mm2WWY) ，[![equation](https://bit.ly/2GYAVVr)  
+        令![equation](https://bit.ly/3mnloyO) ，![equation](https://bit.ly/3mm2WWY) ，![equation](https://bit.ly/2GYAVVr)  
         於是可以想像成，針對某一點(x,y)去計算其他點的 X, Y , XY。  
         思路：  
         1. Sort by x coord.
         2. 切半分成兩群  
         3. 左右各自往下做，做完回傳到上一層  
-        4. 處理跨左右兩邊的情形：左邊挑 y 最小的點，劃一水平線為基準，用小於此基準線的點更新 Sigma(x), sigma(y), sigma(xy).
+        4. 處理跨左右兩邊的情形：左邊挑 y 最小的點，劃一水平線為基準，用小於此基準線的點更新 X, Y, XY.
 
 * [hw2 #1](./hw2-1)  
     * (Reference: [To get sum of Geometric series in O(1)](https://www.geeksforgeeks.org/sum-of-the-series-20-21-22-2n/)) (沒有用到)
