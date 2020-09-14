@@ -13,3 +13,5 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
 * [hw2 #1](./hw2-1)  
     * (Reference: [To get sum of Geometric series in O(1)](https://www.geeksforgeeks.org/sum-of-the-series-20-21-22-2n/)) (沒有用到)
     * [用位元運算實現2^N](http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch2/8.htm)
+
+* [hw2 #2](./hw2-2)
