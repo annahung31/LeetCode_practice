@@ -9,9 +9,18 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
 
 ### Advanced
 * [hw1 #2](./hw1-2)
+    * [Advanced solution](./hw1-2/advancedSolution.cpp):  
+        每一個長方形的面積= |x - xi| * |y - yi|。  
+        若已知 x > xi, y > yi，則所有長方形的面積總和可簡化為  
+        [img]http://www.sciweavers.org/tex2img.php?eq=%20%5Csum_i%5En%20%20%28x%20-%20%20x_%7Bi%7D%20%29%28y-%20y_%7Bi%7D%20%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0[/img]
+        思路：  
+        1. Sort by x coord.
+        2. 切半分成兩群  
+        3. 左右各自往下做，做完回傳到上一層  
+        4. 處理跨左右兩邊的情形：左邊挑 y 最小的點，劃一水平線為基準，用小於此基準線的點更新 Sigma(x), sigma(y), sigma(xy).
 
 * [hw2 #1](./hw2-1)  
     * (Reference: [To get sum of Geometric series in O(1)](https://www.geeksforgeeks.org/sum-of-the-series-20-21-22-2n/)) (沒有用到)
     * [用位元運算實現2^N](http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch2/8.htm)
 
-* [hw2 #2](./hw2-2)
+* [hw2 #2](./hw2-2)  
