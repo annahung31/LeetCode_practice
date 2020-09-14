@@ -9,8 +9,8 @@ int solu(int target){
     int n=0, count=0, nLeft, leftCount;  //need n days to achieve target
 
     while (true){
-        if (count + pow(2, n) < target){
-            count += pow(2, n);
+        if (count + (1 << n) < target){
+            count += 1 << n;
             n += 1;
         }
         else{
