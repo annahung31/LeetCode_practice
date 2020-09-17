@@ -2,6 +2,12 @@
 My personal notes for LeetCode practice.
 
 
+## Thinking
+* [Difference between Divide-and-Conquer and DP](https://sls.weco.net/blog/ie945232/27-may-2007/6442)  
+    - DC: Top-down
+    - DP: Bottom-up 
+
+
 ## DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
     - Reference: https://www.youtube.com/watch?v=7J5rs56JBs8 
@@ -25,4 +31,4 @@ My personal notes for LeetCode practice.
     arr[j...high-1] 包含所有尚未迭代的元素。
     arr[high] pivot 本身。
     ```
-
+* [判斷是否為質數](https://coherence0815.wordpress.com/2015/05/15/if-a-number-is-prime-in-c/)
