@@ -4,8 +4,8 @@
 #include<cmath>
 #include<vector>
 using namespace std;
-#define MOD 1000000007;
-#define INF 1000000000;
+#define MOD 1000000007
+#define INF 1000000000
 
 int main(){ 
     int n, i, j;
