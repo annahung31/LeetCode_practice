@@ -19,16 +19,16 @@ void Merge(vector<int> &a_vector, int front_idx, int mid_idx, int end_idx){
     for (i=front_idx; i <=end_idx; i++){
         if (leftVector[leftIdx] <= rightVector[rightIdx]){
             a_vector[i] = leftVector[leftIdx]; 
+            leftIdx++;
         }
         else{
             a_vector[i] = rightVector[rightIdx]; 
+            rightIdx++;
         }
 
     }
 
 }
-
-
 
 
 
