@@ -2,20 +2,16 @@
 My personal notes for LeetCode practice.
 
 
-## Thinking
-* [Difference between Divide-and-Conquer and DP](https://sls.weco.net/blog/ie945232/27-may-2007/6442)  
-    - DC: Top-down
-    - DP: Bottom-up 
+## Problem Index
 
-
-## DP
+### DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
     - Reference: https://www.youtube.com/watch?v=7J5rs56JBs8 
 
 * [70. Climbing Stairs](70_Climbing_Stairs.py) 
     - Reference: https://www.youtube.com/watch?v=LpsDWvkd-4Q
 
-## Recurrence
+### Recurrence
 
 * [215. Kth Largest Element in an Array](215_Kth_Largest_Element_in_an_Array.py) 
     - Reference: 
@@ -31,4 +27,16 @@ My personal notes for LeetCode practice.
     arr[j...high-1] 包含所有尚未迭代的元素。
     arr[high] pivot 本身。
     ```
+
+## Reference
+
+### Thinking
+* [Difference between Divide-and-Conquer and DP](https://sls.weco.net/blog/ie945232/27-may-2007/6442)  
+    - DC: Top-down
+    - DP: Bottom-up 
+
+### Divide-and-Conquer
+* [Merge Sort](https://alrightchiu.github.io/SecondRound/comparison-sort-merge-sorthe-bing-pai-xu-fa.html)
+
+
 * [判斷是否為質數](https://coherence0815.wordpress.com/2015/05/15/if-a-number-is-prime-in-c/)
