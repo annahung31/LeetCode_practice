@@ -9,31 +9,38 @@ using namespace std;
 // on basis of a particular column 
 bool sortcol( const vector<int>& v1, 
                const vector<int>& v2 ) { 
- return v1[0] < v2[0]; 
+ return v1[0] > v2[0]; 
 } 
 
 
-int crossArea(vector< vector<int> > pointSet, int st_idx, int mid_idx, int ed_idx, int &totalArea){
-    totalArea += 1;
+int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int end_idx, int &totalArea,
+                int &sigma_x, int &sigma_y, int &sigma_xy){
+    
+    vector< vector<int> > leftSet(pointSet.begin()+front_idx, pointSet.begin()+mid_idx+1);
+    vector< vector<int> > rightSet(pointSet.begin()+mid_idx+1, pointSet.begin()+end_idx+1);
+    int i, leftIdx=0, rightIdx=0;
+
+    
+
+
+
 }
 
 
 
-int calArea(vector< vector<int> > pointSet, int st_idx, int ed_idx, int &totalArea){
+int calArea(vector< vector<int> > pointSet, int front_idx, int end_idx, int &totalArea, 
+            int &sigma_x, int &sigma_y, int &sigma_xy){
     
-    if (st_idx < ed_idx){
-        int j;
-        for (j=st_idx; j<=ed_idx; j++){
-            cout << pointSet[j][0] << ":" << pointSet[j][1]<< endl;
-        }
+    if (front_idx < end_idx){
+
 
         // Divide
-        int mid_idx = (st_idx + ed_idx)/2;
-        calArea(pointSet, st_idx, mid_idx, totalArea);
-        calArea(pointSet, mid_idx+1, ed_idx, totalArea);
+        int mid_idx = (front_idx + end_idx)/2;
+        calArea(pointSet, front_idx, mid_idx, totalArea, sigma_x, sigma_y, sigma_xy);
+        calArea(pointSet, mid_idx+1, end_idx, totalArea, sigma_x, sigma_y, sigma_xy);
 
         // conquer
-        crossArea(pointSet, st_idx, mid_idx, ed_idx, totalArea);
+        crossArea(pointSet, front_idx, mid_idx, end_idx, totalArea,sigma_x, sigma_y, sigma_xy);
         //totalArea = rightArea + leftArea + crossArea
     }
     
@@ -41,7 +48,7 @@ int calArea(vector< vector<int> > pointSet, int st_idx, int ed_idx, int &totalAr
 
 
 int main(){ 
-    int n, i, j, value, deltaX, deltaY, totalArea=0;
+    int n, i, j, value, deltaX, deltaY, totalArea=0, sigma_x=0, sigma_y=0, sigma_xy=0;
     cin >> n;          
 
     vector<int> a_point;
@@ -70,7 +77,7 @@ int main(){
 
 
 
-    calArea(pointSet, 0, n-1, totalArea);
+    //calArea(pointSet, 0, n-1, totalArea, sigma_x, sigma_y, sigma_xy);
     
     //cout << totalArea << endl;
     //return totalArea; 
