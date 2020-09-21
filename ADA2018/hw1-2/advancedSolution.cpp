@@ -19,45 +19,52 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     vector< vector<int> > rightSet(pointSet.begin()+mid_idx+1, pointSet.begin()+end_idx+1);
     
     int i, j;
-    int sigma_x, sigma_y, sigma_xy, temp;
+    int sigma_x, sigma_y, sigma_xy, temp, num_p;
     //from left to right
     for (i=leftSet.size()-1; i >=0; i--){
-        sigma_x=0; sigma_y=0; sigma_xy=0; temp=0;
+        sigma_x=0; sigma_y=0; sigma_xy=0; temp=0; num_p=0;
+        
         for (j=rightSet.size()-1; j >=0; j--){
-            //cout << "left:(" << leftSet[i][0] << "," << leftSet[i][1] << ")" << endl;
-            //cout << "right:(" << leftSet[j][0] << "," << leftSet[j][1] << ")" << endl;
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] < leftSet[i][1]){
                 sigma_x+=rightSet[j][0];
                 sigma_y+=rightSet[j][1];
                 sigma_xy+=rightSet[j][0]*rightSet[j][1];
+                num_p+=1;
             }
         }
 
-
-        temp = leftSet[i][1]*sigma_x - leftSet[i][0]*leftSet[i][1] - sigma_xy + leftSet[i][0]*sigma_y;
-
+    
+        if (sigma_x==0 && sigma_y==0 && sigma_xy==0){
+            temp = 0;
+        }
+        else{
+            temp = leftSet[i][1]*sigma_x - num_p*leftSet[i][0]*leftSet[i][1] - sigma_xy + leftSet[i][0]*sigma_y;
+        }
         totalArea += temp;
-        cout << totalArea << endl;
+        
     }
     
 
     //from right to left
     for (j=rightSet.size()-1; j >=0; j--){
-        for (i=leftSet.size()-1; i >=0; i--){
-        sigma_x=0; sigma_y=0; sigma_xy=0; temp=0;
+        sigma_x=0; sigma_y=0; sigma_xy=0; temp=0; num_p=0;
         
+        for (i=leftSet.size()-1; i >=0; i--){
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] > leftSet[i][1]){
-                sigma_x+=rightSet[i][0];
-                sigma_y+=rightSet[i][1];
-                sigma_xy+=rightSet[i][0]*rightSet[i][1];
+                sigma_x+=leftSet[i][0];
+                sigma_y+=leftSet[i][1];
+                sigma_xy+=leftSet[i][0]*leftSet[i][1];
+                num_p+=1;
             }
         }
 
-        
-        temp = (leftSet[j][1]*sigma_x - leftSet[j][0]*leftSet[j][1] - sigma_xy + leftSet[j][0]*sigma_y)*(-1);
-        
+        if (sigma_x==0 && sigma_y==0 && sigma_xy==0){
+            temp = 0;
+        }
+        else{
+            temp = (rightSet[j][1]*sigma_x - num_p*rightSet[j][0]*rightSet[j][1] - sigma_xy + rightSet[j][0]*sigma_y)*(-1);
+        }
         totalArea += temp;
-        cout << totalArea << endl;
     }
     
 
@@ -99,7 +106,6 @@ int main(){
         }
     }
 
-    
 
     //sort the pointSet by x coordinate.
     sort(pointSet.begin(), pointSet.end(), sortcol); 
