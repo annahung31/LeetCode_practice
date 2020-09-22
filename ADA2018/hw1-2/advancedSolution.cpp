@@ -7,24 +7,33 @@ using namespace std;
 
 // Driver function to sort the 2D vector 
 // on basis of a particular column 
+// return a vector set with vector[0] to have smallest x.
 bool sortcol( const vector<int>& v1, 
                const vector<int>& v2 ) { 
  return v1[0] < v2[0]; 
 } 
+
+// return a vector set with vector[0] to have smallest y.
+bool sortY( const vector<int>& v1, 
+               const vector<int>& v2 ) { 
+ return v1[1] < v2[1]; 
+} 
+
 
 
 int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int end_idx, int &totalArea){
     
     vector< vector<int> > leftSet(pointSet.begin()+front_idx, pointSet.begin()+mid_idx+1);
     vector< vector<int> > rightSet(pointSet.begin()+mid_idx+1, pointSet.begin()+end_idx+1);
-    
+    sort(leftSet.begin(), leftSet.end(), sortY); 
+    sort(rightSet.begin(), rightSet.end(), sortY); 
     int i, j;
     int sigma_x, sigma_y, sigma_xy, temp, num_p;
     //from left to right
-    for (i=leftSet.size()-1; i >=0; i--){
+    for (i=0; i <leftSet.size(); i++){
         sigma_x=0; sigma_y=0; sigma_xy=0; temp=0; num_p=0;
         
-        for (j=rightSet.size()-1; j >=0; j--){
+        for (j=0; j<rightSet.size(); j++){
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] < leftSet[i][1]){
                 sigma_x+=rightSet[j][0];
                 sigma_y+=rightSet[j][1];
@@ -32,7 +41,6 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
                 num_p+=1;
             }
         }
-
     
         if (sigma_x==0 && sigma_y==0 && sigma_xy==0){
             temp = 0;
@@ -46,10 +54,10 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     
 
     //from right to left
-    for (j=rightSet.size()-1; j >=0; j--){
+    for (j=0; j<rightSet.size(); j++){
         sigma_x=0; sigma_y=0; sigma_xy=0; temp=0; num_p=0;
         
-        for (i=leftSet.size()-1; i >=0; i--){
+        for (i=0; i<leftSet.size(); i++){
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] > leftSet[i][1]){
                 sigma_x+=leftSet[i][0];
                 sigma_y+=leftSet[i][1];
