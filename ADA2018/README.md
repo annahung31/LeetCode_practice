@@ -18,7 +18,7 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
         1. Sort by x coord.
         2. 切半分成兩群  
         3. 左右各自往下做，做完回傳到上一層  
-        4. 處理跨左右兩邊的情形：排序y，左邊挑 y 最小的點，劃一水平線為基準，用小於此基準線的點更新 X, Y, XY.
+        4. 處理跨左右兩邊的情形：排序y，左邊挑 y 最小的點，劃一水平線為基準，用小於此基準線的點更新 X, Y, XY.  
         **TODO** : 降低crossArea 複雜度
 
 * [x] [hw2 #1](./hw2-1)  
