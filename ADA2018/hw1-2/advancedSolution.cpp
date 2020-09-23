@@ -22,7 +22,14 @@ bool sortY( const vector<int>& v1,
 
 
 int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int end_idx, int &totalArea){
-    
+    /*
+    For a given point A(x0,y0) from left-hand side with index i,
+    update sigma_x, sigma_y, sigma_xy of all the points from right-hand side.
+    Also update sigma_x0y0, which is x0*y0 from point A itself.
+     */
+
+
+
     vector< vector<int> > leftSet(pointSet.begin()+front_idx, pointSet.begin()+mid_idx+1);
     vector< vector<int> > rightSet(pointSet.begin()+mid_idx+1, pointSet.begin()+end_idx+1);
     sort(leftSet.begin(), leftSet.end(), sortY); 
