@@ -32,26 +32,29 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     //from left to right
     sigma_x=0; sigma_y=0; sigma_xy=0;temp=0; j_st=0;
     for (i=0; i <leftSet.size(); i++){
-        sigma_x0y0=leftSet[i][0]*leftSet[i][1];        
-
+        //sigma_x0y0=leftSet[i][0]*leftSet[i][1];        
+        sigma_x0y0=0;
         for (j=j_st; j<rightSet.size(); j++){
+            //cout << "i:" << i << ",j:" << j << endl;
+            //cout << "left: coord: (" << leftSet[i][0] << "," << leftSet[i][1] << ") to (" << rightSet[j][0] << "," << rightSet[j][1] << ")" << endl;
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] < leftSet[i][1]){
+                //cout << "left ===Update===" << endl;
                 sigma_x+=rightSet[j][0];
                 sigma_y+=rightSet[j][1];
                 sigma_xy+=rightSet[j][0]*rightSet[j][1];
-                //sigma_x0y0+=leftSet[i][0]*leftSet[i][1];
+                sigma_x0y0+=leftSet[i][0]*leftSet[i][1];
                 j_st +=1;
-                cout << sigma_x0y0 << ":" << leftSet[i][0] << "," << leftSet[i][1] << endl;
+                //cout << sigma_x0y0 << ":" << leftSet[i][0] << "," << leftSet[i][1] << endl;
             }
         }
-        cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
+        //cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
         if (sigma_x == 0 && sigma_y==0 && sigma_xy==0){
             temp = 0;
         }
         else{
             temp = leftSet[i][1]*sigma_x - sigma_x0y0 - sigma_xy + leftSet[i][0]*sigma_y;
         }
-        cout << "left:" << temp << endl;
+        //cout << "left:" << temp << endl;
         totalArea += temp;
         
     }
@@ -60,25 +63,29 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     //from right to left
     sigma_x=0; sigma_y=0; sigma_xy=0;temp=0; j_st=0;
     for (j=0; j<rightSet.size(); j++){
-        sigma_x0y0=rightSet[j][0]*rightSet[j][1];  
+        sigma_x0y0 = 0;
+        //sigma_x0y0=rightSet[j][0]*rightSet[j][1];  
         for (i=j_st; i<leftSet.size(); i++){
+            //cout << "i:" << i << ",j:" << j << endl;
+            //cout << "right: coord: (" << leftSet[i][0] << "," << leftSet[i][1] << ") to (" << rightSet[j][0] << "," << rightSet[j][1] << ")" << endl;
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] > leftSet[i][1]){
+                //cout << "right ===Update===" << endl;
                 sigma_x+=leftSet[i][0];
                 sigma_y+=leftSet[i][1];
                 sigma_xy+=leftSet[i][0]*leftSet[i][1];
-                //sigma_x0y0+=rightSet[j][0]*rightSet[j][1];
+                sigma_x0y0+=rightSet[j][0]*rightSet[j][1];
                 j_st +=1;
 
             }
         }
-        cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
+        //cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
         if (sigma_x == 0 && sigma_y==0 && sigma_xy==0){
             temp = 0;
         }
         else{
             temp = (rightSet[j][1]*sigma_x - sigma_x0y0 - sigma_xy + rightSet[j][0]*sigma_y)*(-1);
         }
-        cout << "right:" << temp << endl;
+        //cout << "right:" << temp << endl;
         totalArea += temp;
     }
     
