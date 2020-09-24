@@ -36,7 +36,7 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     int i, j, j_st;
     int sigma_x, sigma_y, sigma_xy, temp;
     //from left to right
-    sigma_x=0; sigma_y=0; sigma_xy=0;temp=0; j_st=0;
+    sigma_x=0; sigma_y=0; sigma_xy=0;temp=0; j_st=0; //use j_st to avoid duplicate calculation
     for (i=0; i <leftSet.size(); i++){
 
         for (j=j_st; j<rightSet.size(); j++){
