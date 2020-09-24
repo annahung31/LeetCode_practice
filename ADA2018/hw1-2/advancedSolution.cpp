@@ -25,7 +25,6 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     /*
     For a given point A(x0,y0) from left-hand side with index i,
     update sigma_x, sigma_y, sigma_xy of all the points from right-hand side.
-    Also update sigma_x0y0, which is x0*y0 from point A itself.
      */
 
 
@@ -41,26 +40,19 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     for (i=0; i <leftSet.size(); i++){
 
         for (j=j_st; j<rightSet.size(); j++){
-            //cout << "i:" << i << ",j:" << j << endl;
-            //cout << "left: coord: (" << leftSet[i][0] << "," << leftSet[i][1] << ") to (" << rightSet[j][0] << "," << rightSet[j][1] << ")" << endl;
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] < leftSet[i][1]){
-                //cout << "left ===Update===" << endl;
                 sigma_x+=rightSet[j][0];
                 sigma_y+=rightSet[j][1];
                 sigma_xy+=rightSet[j][0]*rightSet[j][1];
-                
                 j_st +=1;
-                //cout << sigma_x0y0 << ":" << leftSet[i][0] << "," << leftSet[i][1] << endl;
             }
         }
-        //cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
         if (sigma_x == 0 && sigma_y==0 && sigma_xy==0){
             temp = 0;
         }
         else{
             temp = leftSet[i][1]*sigma_x - j_st*leftSet[i][0]*leftSet[i][1] - sigma_xy + leftSet[i][0]*sigma_y;
         }
-        //cout << "left:" << temp << endl;
         totalArea += temp;
         
     }
@@ -71,26 +63,20 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
     for (j=0; j<rightSet.size(); j++){
 
         for (i=j_st; i<leftSet.size(); i++){
-            //cout << "i:" << i << ",j:" << j << endl;
-            //cout << "right: coord: (" << leftSet[i][0] << "," << leftSet[i][1] << ") to (" << rightSet[j][0] << "," << rightSet[j][1] << ")" << endl;
             if (rightSet[j][0] > leftSet[i][0] && rightSet[j][1] > leftSet[i][1]){
-                //cout << "right ===Update===" << endl;
                 sigma_x+=leftSet[i][0];
                 sigma_y+=leftSet[i][1];
                 sigma_xy+=leftSet[i][0]*leftSet[i][1];
-                
                 j_st +=1;
 
             }
         }
-        //cout << "x:" << sigma_x << ",y:" << sigma_y << ", xy:" << sigma_xy << ",xy0:" << sigma_x0y0 << endl;
         if (sigma_x == 0 && sigma_y==0 && sigma_xy==0){
             temp = 0;
         }
         else{
             temp = (rightSet[j][1]*sigma_x - j_st*rightSet[j][0]*rightSet[j][1] - sigma_xy + rightSet[j][0]*sigma_y)*(-1);
         }
-        //cout << "right:" << temp << endl;
         totalArea += temp;
     }
     
@@ -100,12 +86,9 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
 
 
 int calArea(vector< vector<int> > pointSet, int front_idx, int end_idx, int &totalArea){
-    
     if (front_idx < end_idx){
-
         // Divide
         int mid_idx = (front_idx + end_idx)/2;
-        
         calArea(pointSet, front_idx, mid_idx, totalArea);
         calArea(pointSet, mid_idx+1, end_idx, totalArea);
         // conquer
@@ -114,7 +97,6 @@ int calArea(vector< vector<int> > pointSet, int front_idx, int end_idx, int &tot
     }
     
 }
-
 
 int main(){ 
     int n, i, j, value, deltaX, deltaY, totalArea=0;
