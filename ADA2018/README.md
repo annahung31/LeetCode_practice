@@ -8,7 +8,7 @@ Practices from [ADA2018](https://www.csie.ntu.edu.tw/~yvchen/f107-ada/)
 
 
 ### Advanced
-* [ ] [hw1 #2](./hw1-2)
+* [x] [hw1 #2](./hw1-2)
     * [Advanced solution](./hw1-2/advancedSolution.cpp):  
         每一個長方形的面積= |x - xi| * |y - yi|。  
         若已知 x > xi, y > yi，則所有長方形的面積總和可簡化為  
