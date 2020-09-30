@@ -11,6 +11,9 @@ My personal notes for LeetCode practice.
 * [70. Climbing Stairs](70_Climbing_Stairs.py) 
     - Reference: https://www.youtube.com/watch?v=LpsDWvkd-4Q
 
+* [139. Work Break](139_word_break.cpp)
+    - Reference: [Solution from paul7](https://leetcode.com/problems/word-break/discuss/43814/C%2B%2B-Dynamic-Programming-simple-and-fast-solution-(4ms)-with-optimization)
+
 ### Recurrence
 
 * [215. Kth Largest Element in an Array](215_Kth_Largest_Element_in_an_Array.py) 
