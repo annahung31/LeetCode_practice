@@ -46,6 +46,9 @@ int crossArea(vector< vector<int> > pointSet, int front_idx, int mid_idx, int en
                 sigma_xy+=rightSet[j][0]*rightSet[j][1];
                 j_st +=1;
             }
+            else(
+                break;
+            )
         }
         if (sigma_x == 0 && sigma_y==0 && sigma_xy==0){
             temp = 0;

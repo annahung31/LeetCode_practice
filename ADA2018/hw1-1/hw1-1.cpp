@@ -24,8 +24,8 @@ int main(){
     }
 
     for (i=0; i<price.size(); i++){
-        minPrice = min(minPrice, price[i]);
         maxPro = max(maxPro, price[i]-minPrice);
+        minPrice = min(minPrice, price[i]);
     }
     cout << maxPro << "\n";
     return maxPro;
