@@ -4,6 +4,11 @@ My personal notes for LeetCode practice.
 
 ## Problem Index
 
+### Linked list
+* [206. Reverse Linked List](206_Reverse_Linked_List.ipynb), [LeetCode](https://leetcode.com/problems/reverse-linked-list/)
+    - Reference: https://www.geeksforgeeks.org/reverse-a-linked-list/ 
+
+
 ### DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
     - Reference: https://www.youtube.com/watch?v=7J5rs56JBs8 
