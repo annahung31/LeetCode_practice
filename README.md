@@ -8,7 +8,8 @@ My personal notes for LeetCode practice.
 * [206. Reverse Linked List](206_Reverse_Linked_List.ipynb), [LeetCode](https://leetcode.com/problems/reverse-linked-list/)
     - Reference: https://www.geeksforgeeks.org/reverse-a-linked-list/ 
 ### Stack
-* [20. Valid Parentheses](20_Valid_Parentheses(stack).ipynb), [LeetCode 20](https://leetcode.com/problems/valid-parentheses/)
+* [20. Valid Parentheses](20_Valid_Parentheses.ipynb), [LeetCode 20](https://leetcode.com/problems/valid-parentheses/)
+    - Reference: https://www.geeksforgeeks.org/stack-in-python/
 
 ### DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
