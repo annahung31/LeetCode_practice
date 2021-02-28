@@ -13,6 +13,8 @@ My personal notes for LeetCode practice.
 * [155. Min Stack](stacks.ipynb), [LeetCode 155](https://leetcode.com/problems/min-stack/)
 * [232. Implement Queue using Stacks](stacks.ipynb#232), [Leetcode 232](https://leetcode.com/problems/implement-queue-using-stacks/)
 
+### Heap
+* [703. Kth Largest Element in a Stream](heap.ipynb), [Leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
 ### DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
