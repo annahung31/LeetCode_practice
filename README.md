@@ -16,6 +16,11 @@ My personal notes for LeetCode practice.
 ### Heap
 * [703. Kth Largest Element in a Stream](heap.ipynb), [Leetcode 703](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
+### Tree
+* [101. Symmetric Tree](tree.ipynb), [Leetcode 101](https://leetcode.com/problems/symmetric-tree/)
+* [104. Maximum Depth of Binary Tree](tree.ipynb), [Leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+
 ### DP
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
     - Reference: https://www.youtube.com/watch?v=7J5rs56JBs8 
