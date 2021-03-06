@@ -21,15 +21,19 @@ My personal notes for LeetCode practice.
 * [104. Maximum Depth of Binary Tree](tree.ipynb), [Leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
 
-### DP
+### DP/Greedy
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
     - Reference: https://www.youtube.com/watch?v=7J5rs56JBs8 
 
 * [70. Climbing Stairs](70_Climbing_Stairs.py) 
     - Reference: https://www.youtube.com/watch?v=LpsDWvkd-4Q
 
+* [746. Min Cost Climbing Stairs](746.py), [LeetCode](https://leetcode.com/problems/min-cost-climbing-stairs/)
+
 * [139. Work Break](139_word_break.cpp)
     - Reference: [Solution from paul7](https://leetcode.com/problems/word-break/discuss/43814/C%2B%2B-Dynamic-Programming-simple-and-fast-solution-(4ms)-with-optimization)
+
+* ### [198. House Robber](DP.ipynb) [LeetCode](https://leetcode.com/problems/house-robber/)
 
 ### Recurrence
 
