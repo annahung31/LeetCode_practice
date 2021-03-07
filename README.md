@@ -4,6 +4,10 @@ My personal notes for LeetCode practice.
 
 ## Problem Index
 
+### Array
+* [leetcode 202: Happy Number](array.ipynb), [LeetCode](https://leetcode.com/problems/happy-number/)
+
+
 ### Linked list
 * [206. Reverse Linked List](linked-list.ipynb), [LeetCode](https://leetcode.com/problems/reverse-linked-list/)
     - Reference: https://www.geeksforgeeks.org/reverse-a-linked-list/ 
