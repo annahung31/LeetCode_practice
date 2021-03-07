@@ -19,7 +19,7 @@ My personal notes for LeetCode practice.
 ### Tree
 * [101. Symmetric Tree](tree.ipynb), [Leetcode 101](https://leetcode.com/problems/symmetric-tree/)
 * [104. Maximum Depth of Binary Tree](tree.ipynb), [Leetcode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-
+* [111. Minimum Depth of Binary Tree](tree.ipynb), [Leetcode 111](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 
 ### DP/Greedy
 * [53.Maximum Subarray](53_Maximum_Subarray.py) 
