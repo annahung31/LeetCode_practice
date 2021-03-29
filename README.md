@@ -37,11 +37,11 @@ My personal notes for LeetCode practice.
 * [139. Work Break](139_word_break.cpp)
     - Reference: [Solution from paul7](https://leetcode.com/problems/word-break/discuss/43814/C%2B%2B-Dynamic-Programming-simple-and-fast-solution-(4ms)-with-optimization)
 
-* [198. House Robber](DP.ipynb) [LeetCode](https://leetcode.com/problems/house-robber/)
+* [198. House Robber](DP.ipynb), [LeetCode](https://leetcode.com/problems/house-robber/)
 
-* [718. Maximum Length of Repeated Subarray](DP.ipynb) [LeetCode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+* [718. Maximum Length of Repeated Subarray](DP.ipynb), [LeetCode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 
-* [152. Maximum Product Subarray](DP.ipynb) [LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
+* [152. Maximum Product Subarray](DP.ipynb), [LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
 
 ### Recurrence
 
