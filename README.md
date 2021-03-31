@@ -41,7 +41,10 @@ My personal notes for LeetCode practice.
 
 * [718. Maximum Length of Repeated Subarray](DP.ipynb), [LeetCode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 
-* [152. Maximum Product Subarray](DP.ipynb), [LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
+* [152. Maximum Product Subarray](DP.ipynb), [LeetCode](https://leetcode.com/problems/maximum-product-subarray/)  
+
+* [338. Counting Bits](DP.ipynb), [LeetCode](https://leetcode.com/problems/counting-bits/)
+
 
 ### Recurrence
 
