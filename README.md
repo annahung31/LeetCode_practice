@@ -6,7 +6,7 @@ My personal notes for LeetCode practice.
 
 ### Array
 * [leetcode 202: Happy Number](array.ipynb), [LeetCode](https://leetcode.com/problems/happy-number/)
-* [3Sum](), [LeetCode]()
+* [3Sum](array.ipynb), [LeetCode](https://leetcode.com/problems/3sum/)
 
 ### Linked list
 * [206. Reverse Linked List](linked-list.ipynb), [LeetCode](https://leetcode.com/problems/reverse-linked-list/)
