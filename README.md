@@ -45,6 +45,7 @@ My personal notes for LeetCode practice.
 
 * [338. Counting Bits](DP.ipynb), [LeetCode](https://leetcode.com/problems/counting-bits/)
 
+* [3. Longest Substring Without Repeating Characters](DP.ipynb), [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ### Recurrence
 
