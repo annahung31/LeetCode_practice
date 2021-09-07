@@ -1,6 +1,9 @@
 # LeetCode_practice
 My personal notes for LeetCode practice.
 
+## Mindset
+* Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be certain that we're not overlooking anything while coming up with our algorithm, and that we're testing all special cases when we're ready to test. [Reference](https://leetcode.com/problems/remove-linked-list-elements/discuss/158651/Simple-Python-solution-with-explanation-(single-pointer-dummy-head))
+
 
 ## Problem Index
 
