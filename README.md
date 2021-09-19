@@ -10,6 +10,7 @@ My personal notes for LeetCode practice.
 ### Array
 * [leetcode 202: Happy Number](array.ipynb), [LeetCode](https://leetcode.com/problems/happy-number/)
 * [3Sum](array.ipynb), [LeetCode](https://leetcode.com/problems/3sum/)
+* [2-pointer summary](https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers)
 
 ### Linked list
 * [206. Reverse Linked List](linked-list.ipynb), [LeetCode](https://leetcode.com/problems/reverse-linked-list/)
